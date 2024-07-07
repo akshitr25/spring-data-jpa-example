@@ -105,16 +105,19 @@ public class BookController {
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
-//	@GetMapping("/books/booktitle")
-//	public ResponseEntity<List<Book>> findByBooktitle()
+//	@GetMapping("/books/{author}")
+//	public ResponseEntity<List<Book>> findByAuthor(@PathVariable("author") String author)
 //	{
 //		try
 //		{
-//			List<Book> books=bookRepo.findByTitleContaining(booktitle);
+//			List<Book> books=bookRepo.findByAuthor(author);
+//			if(books.isEmpty())
+//				return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+//			return new ResponseEntity<>(books,HttpStatus.OK);
 //		}
 //		catch(Exception e)
 //		{
-//			
+//			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 //		}
 //	}
 }
