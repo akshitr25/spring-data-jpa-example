@@ -37,7 +37,7 @@ public class BookController {
 				bookRepo.findByBooktitleContaining(booktitle).forEach(books::add);
 			if(books.isEmpty())
 				return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-			return new ResponseEntity<>(HttpStatus.OK);
+			return new ResponseEntity<>(books,HttpStatus.OK);
 		}
 		catch(Exception e)
 		{
